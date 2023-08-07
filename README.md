@@ -30,3 +30,5 @@ npm run release
 # Create the zipped package to upload to the Chrome web store
 npm run build
 ```
+
+test

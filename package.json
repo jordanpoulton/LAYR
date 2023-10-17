@@ -1,8 +1,8 @@
 {
-  "name": "highlighter",
-  "version": "4.0.5",
-  "description": "Chrome extension to highlight text on websites with a simple right-click or keyboard shortcut. Saves highlights on your device.",
-  "repository": "github:jeromepl/highlighter",
+  "name": "LAYR",
+  "version": "1",
+  "description": "A social LAYR on top of the internet itself - we allow you to upvote, downvote, comment and debate - in line - on any webpage across the entire internet.",
+  "repository": "github:jordanpoulton/LAYR",
   "main": "manifest.json",
   "license": "MIT",
   "devDependencies": {

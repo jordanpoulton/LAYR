@@ -1,6 +1,6 @@
 # Privacy Policy
 
-This privacy policy lists what data we collect from users of 'highlighter' (the "extension"), in what way, and how we use this data.
+This privacy policy lists what data we collect from users of 'LAYR' (the "extension"), in what way, and how we use this data.
 This policy applies to all features of the extension and to all users of it.
 
 ## What we collect
@@ -10,7 +10,7 @@ We use Google Analytics to collect basic usage information of the extension by u
 
 We additionally collect usage information of the extension such as which tools are used and what different menus are used to access specific features of the extension.
 
-**We do not collect browsing information of our users such as contents of highlights and webpages visited.**
+**We do not collect browsing information of our users such as contents of interactions and webpages visited.**
 
 ## What we use this data for
 

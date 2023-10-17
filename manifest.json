@@ -1,18 +1,18 @@
 {
     "manifest_version": 3,
-    "name": "Highlighter",
-    "description": "Highlight text on websites with a simple right-click or keyboard shortcut. Saves highlights on your device.",
-    "version": "4.0.5",
+    "name": "LAYR",
+    "description": "A social LAYR on top of the internet itself - upvote, downvote, comment and debate - in line - on any webpage.",
+    "version": "1",
     "icons": {
-        "16": "images/16.png",
-        "48": "images/48.png",
-        "128": "images/128.png"
+        "16": "images/Logo16.png",
+        "48": "images/Logo48.png",
+        "128": "images/Logo128.png"
     },
     "action": {
         "default_icon": {
-            "16": "images/16.png",
-            "48": "images/48.png",
-            "128": "images/128.png"
+            "16": "images/Logo16.png",
+            "48": "images/Logo48.png",
+            "128": "images/Logo128.png"
         },
         "default_popup": "src/popup/index.html"
     },
@@ -38,28 +38,22 @@
     "commands": {
         "execute-highlight": {
             "suggested_key": {
-                "default": "Alt+H",
-                "mac": "MacCtrl+H"
+                "default": "Alt+L",
+                "mac": "MacCtrl+L"
             },
             "description": "Highlight selected text"
         },
         "toggle-highlighter-cursor": {
-            "description": "Toggle the highlighter cursor"
+            "description": "Activate LAYR Cursor"
         },
-        "change-color-to-yellow": {
-            "description": "Change highlighter color to yellow"
+        "change-color-to-green": {
+            "description": "Like Text"
         },
-        "change-color-to-cyan": {
-            "description": "Change highlighter color to blue"
+        "change-color-to-red": {
+            "description": "Dislike Text"
         },
-        "change-color-to-lime": {
-            "description": "Change highlighter color to green"
-        },
-        "change-color-to-magenta": {
-            "description": "Change highlighter color to pink"
-        },
-        "change-color-to-dark": {
-            "description": "Change highlighter color to dark"
+        "change-color-to-grey": {
+            "description": "Highlight text (Neither Like nor Dislike)"
         }
     },
     "permissions": [

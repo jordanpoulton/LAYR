@@ -33,13 +33,11 @@ function initializeContextMenus() {
         chrome.contextMenus.removeAll();
 
         chrome.contextMenus.create({ title: 'Highlight', id: 'highlight', contexts: ['selection'] });
-        chrome.contextMenus.create({ title: 'Toggle Cursor', id: 'toggle-cursor' });
+        chrome.contextMenus.create({ title: 'Activate LAYR Cursor', id: 'toggle-cursor' });
         chrome.contextMenus.create({ title: 'Highlighter color', id: 'highlight-colors' });
-        chrome.contextMenus.create({ title: 'Yellow', id: 'yellow', parentId: 'highlight-colors', type: 'radio' });
-        chrome.contextMenus.create({ title: 'Blue', id: 'blue', parentId: 'highlight-colors', type: 'radio' });
-        chrome.contextMenus.create({ title: 'Green', id: 'green', parentId: 'highlight-colors', type: 'radio' });
-        chrome.contextMenus.create({ title: 'Pink', id: 'pink', parentId: 'highlight-colors', type: 'radio' });
-        chrome.contextMenus.create({ title: "Dark", id: "dark", parentId: "highlight-colors", type: "radio" });
+        chrome.contextMenus.create({ title: 'Like', id: 'green', parentId: 'highlight-colors', type: 'radio' });
+        chrome.contextMenus.create({ title: 'Dislike', id: 'red', parentId: 'highlight-colors', type: 'radio' });
+        chrome.contextMenus.create({ title: 'Highlight', id: 'grey', parentId: 'highlight-colors', type: 'radio' });
 
         // Get the initial selected color value
         const { title: colorTitle } = await getCurrentColor();
@@ -102,25 +100,17 @@ function initializeKeyboardShortcutEventListeners() {
                 trackEvent('toggle-cursor-source', 'keyboard-shortcut');
                 toggleHighlighterCursor();
                 break;
-            case 'change-color-to-yellow':
+            case 'change-color-to-green':
                 trackEvent('color-change-source', 'keyboard-shortcut');
-                changeColor('yellow');
+                changeColor('green');
                 break;
-            case 'change-color-to-cyan':
+            case 'change-color-to-red':
                 trackEvent('color-change-source', 'keyboard-shortcut');
-                changeColor('cyan');
+                changeColor('red');
                 break;
-            case 'change-color-to-lime':
+            case 'change-color-to-grey':
                 trackEvent('color-change-source', 'keyboard-shortcut');
-                changeColor('lime');
-                break;
-            case 'change-color-to-magenta':
-                trackEvent('color-change-source', 'keyboard-shortcut');
-                changeColor('magenta');
-                break;
-            case 'change-color-to-dark':
-                trackEvent('color-change-source', 'keyboard-shortcut');
-                changeColor('dark');
+                changeColor('grey');
                 break;
         }
     });

@@ -13,7 +13,7 @@
     border-radius: 5px;
     padding: 1px 0;
     background-color: #f0f0f0;
-    width: 108px; /* When changing this, also update moveToolbarToHighlight() in hoverTools.js */
+    width: 216px; /* When changing this, also update moveToolbarToHighlight() in hoverTools.js */
     height: 37px;
     display: flex;
     justify-content: space-evenly;
@@ -34,6 +34,18 @@
 
 .highlighter--icon:hover {
     filter: opacity(0.92);
+}
+
+.highlighter--icon-like {
+    background-image:url('chrome-extension://__MSG_@@extension_id__/images/like.png');
+}
+
+.highlighter--icon-dislike {
+    background-image:url('chrome-extension://__MSG_@@extension_id__/images/dislike.png');
+}
+
+.highlighter--icon-highlight {
+    background-image:url('chrome-extension://__MSG_@@extension_id__/images/highlight.png');
 }
 
 .highlighter--icon-copy {

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Highlighter</title>
+    <title>LAYR - A social layer embedded in every web page</title>
 
     <meta name="viewport" content="width=562 height=780 initial-scale=1 maximum-scale=1">
     <meta charset="utf-8">
@@ -20,7 +20,8 @@
 <body>
     <div id="title-section">
         <object class="highlighter-icon" data="../../images/logo.svg" type="image/svg+xml"></object>
-        <h1>Highlighter</h1>
+        <h1>LAYR</h1>
+        <h5> The Web's Social Layer</h5>h5>
     </div>
 
     <div id="close-button" class="material-icons">
@@ -29,7 +30,7 @@
 
     <div id="settings-section">
         <div id="colors-section">
-            <div id="selected-color" class="color" style="background-color: #fff615;">
+            <div id="selected-color" class="color" style="background-color: #44ff93;">
                 <div id="change-color-button" class="material-icons">edit</div>
             </div>
             <div id="colors-list">
@@ -37,11 +38,11 @@
             </div>
         </div>
         <div id="controls-section">
-            <div id="toggle-button">Toggle cursor</div>
+            <div id="toggle-button">Activate LAYR</div>
             <div id="shortcut-section" title="Highlight the currently selected text using this keyboard shortcut">
-                <span>Highlight shortcut: </span>
+                <span>LAYR shortcut: </span>
                 <span id="shortcut-link">
-                    <span id="shortcut-link-text">Alt+H</span>
+                    <span id="shortcut-link-text">Alt+L</span>
                     <span class="material-icons">edit</span>
                 </span>
             </div>
@@ -49,7 +50,7 @@
     </div>
 
     <div id="highlights-section">
-        <div id="tools">
+        <div id="tools"> <!--
             <div class="tool" id="remove-all-button">
                 <span>Delete all</span>
                 <span class="material-icons">delete</span>
@@ -58,24 +59,26 @@
                 <span>Copy all</span>
                 <span class="material-icons">file_copy</span>
             </div>
-        </div>
+        </div> -->
         <div id="highlights-list">
             <!-- A list of <div class="highlight"> elements goes here -->
-            <div id="highlights-list-empty-state">There are no highlights on this page</div>
-            <div id="highlights-list-error-state">There was an error loading your highlights. Please try refreshing the page</div>
-            <div id="highlights-list-lost-title" title="Highlights that Highlighter cannot find anymore because there were changes to this webpage">Lost highlights on this page:</div>
+            <div id="highlights-list-empty-state">There are no interactions on this page</div>
+            <div id="highlights-list-error-state">There was an error loading your interactions. Please try refreshing the page</div>
+            <div id="highlights-list-lost-title" title="Interactions that LAYR cannot find anymore because there were changes to this webpage">Lost interactions on this page:</div>
         </div>
     </div>
 
-    <!-- Modals -->
+    <!-- Modals
     <div id="remove-all-confirmation-modal" class="modal">
-        <p class="modal-text">Are you sure you want to delete all highlights on this page? This operation cannot be
+        <p class="modal-text">Are you sure you want to delete all interactions on this page? This operation cannot be
             undone.</p>
         <div class="modal-actions">
             <div class="modal-button modal-action-cancel" id="remove-all-cancel">Cancel</div>
             <div class="modal-button modal-action-confirm" id="remove-all-confirm">Confirm</div>
         </div>
-    </div>
+    </div> -->
+    
+    <!--
     <div id="change-color-modal" class="modal">
         <h2 class="modal-title">Customize the "<span id="change-color-title">yellow</span>" color</h2>
         <form id="change-color-form">
@@ -102,6 +105,7 @@
             </div>
         </form>
     </div>
+    -->
 </body>
 
 </html>

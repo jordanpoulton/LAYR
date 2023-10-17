@@ -62,7 +62,7 @@ function highlightLegacy(selString, container, selection, color, highlightIndex)
     // Step 1 + 2:
     recursiveWrapper(container);
 
-    color = color ? color : "yellow";
+    color = color ? color : "green";
     const replacements = getReplacements(color, highlightIndex);
 
     // Step 3:

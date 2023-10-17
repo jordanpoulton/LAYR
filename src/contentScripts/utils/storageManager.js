@@ -7,7 +7,7 @@ const STORE_FORMAT_VERSION = chrome.runtime.getManifest().version;
 let alternativeUrlIndexOffset = 0; // Number of elements stored in the alternativeUrl Key. Used to map highlight indices to correct key
 
 async function store(selection, container, url, href, color, textColor) {
-    const { highlights } = await chrome.storage.local.get({ highlights: {} });
+    const { highlights } = await chrome.storage.local.get({ highlights: {} }); // LATER we'll move this storage from local chrome to something like Airtable, and include a username too (later to add follow functionality)
 
     if (!highlights[url]) highlights[url] = [];
 

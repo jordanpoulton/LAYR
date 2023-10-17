@@ -1,4 +1,4 @@
-let showHighlighterCursor = false;
+let showHighlighterCursor = true;
 
 function highlightOnSelection() {
     if (!showHighlighterCursor) return;

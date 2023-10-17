@@ -4,7 +4,7 @@ import { initializeHighlightEventListeners } from '../../hoverTools/index.js';
 
 function highlight(selString, container, selection, color, textColor, highlightIndex) {
     const highlightInfo = {
-        color: color ? color : "yellow",
+        color: color ? color : "green",
         textColor: textColor ? textColor : "inherit",
         highlightIndex: highlightIndex,
         selectionString: selString,

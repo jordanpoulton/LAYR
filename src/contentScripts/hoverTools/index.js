@@ -9,6 +9,9 @@ let hoverToolTimeout = null;
 let currentHighlightEl = null;
 let highlightClicked = false;
 let copyBtnEl = null;
+let likeBtnEl = null;
+let dislikeBtnEl = null;
+let highlightBtnEl = null;
 let changeColorBtnEl = null;
 let deleteBtnEl = null;
 
@@ -19,9 +22,15 @@ function initializeHoverTools() {
         hoverToolEl[0].addEventListener('mouseenter', onHoverToolMouseEnter);
         hoverToolEl[0].addEventListener('mouseleave', onHighlightMouseLeave);
 
+        likeBtnEl = hoverToolEl.find('.highlighter--icon-like')[0];
+        dislikeBtnEl = hoverToolEl.find('.highlighter--icon-dislike')[0];
+        highlightBtnEl = hoverToolEl.find('.highlighter--icon-highlight')[0];
         copyBtnEl = hoverToolEl.find('.highlighter--icon-copy')[0];
         deleteBtnEl = hoverToolEl.find('.highlighter--icon-delete')[0];
         changeColorBtnEl = hoverToolEl.find('.highlighter--icon-change-color')[0];
+        likeBtnEl.addEventListener('click', onLikeBtnClicked);
+        dislikeBtnEl.addEventListener('click', onDislikeBtnClicked);
+        highlightBtnEl.addEventListener('click', onHighlightBtnClicked);
         copyBtnEl.addEventListener('click', onCopyBtnClicked);
         deleteBtnEl.addEventListener('click', onDeleteBtnClicked);
         changeColorBtnEl.addEventListener('click', onChangeColorBtnClicked);
@@ -98,7 +107,7 @@ function onHighlightMouseLeave() {
 
 function moveToolbarToHighlight(highlightEl, cursorX) { // cursorX is optional, in which case no change is made to the x position of the hover toolbar
     const boundingRect = highlightEl.getBoundingClientRect();
-    const toolWidth = 108; // When changing this, also update the width in css #highlighter--hover-tools--container
+    const toolWidth = 216; // When changing this, also update the width in css #highlighter--hover-tools--container
 
     const hoverTop = boundingRect.top - 45;
     getHoverToolEl()?.css({ top: hoverTop });
@@ -137,6 +146,24 @@ function onHoverToolMouseEnter() {
         clearTimeout(hoverToolTimeout);
         hoverToolTimeout = null;
     }
+}
+
+function onLikeBtnClicked() {
+    const highlightId = currentHighlightEl.getAttribute('data-highlight-id');
+    updateHighlightColor('green');
+    chrome.runtime.sendMessage({ action: 'track-event', trackCategory: 'highlight-action', trackAction: 'change-color' });
+}
+
+function onDislikeBtnClicked() {
+    const highlightId = currentHighlightEl.getAttribute('data-highlight-id');
+    updateHighlightColor('red');
+    chrome.runtime.sendMessage({ action: 'track-event', trackCategory: 'highlight-action', trackAction: 'change-color' });
+}
+
+function onHighlightBtnClicked() {
+    const highlightId = currentHighlightEl.getAttribute('data-highlight-id');
+    updateHighlightColor('grey');
+    chrome.runtime.sendMessage({ action: 'track-event', trackCategory: 'highlight-action', trackAction: 'change-color' });
 }
 
 function onCopyBtnClicked() {
